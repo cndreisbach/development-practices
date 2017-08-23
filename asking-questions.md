@@ -32,80 +32,27 @@ If your question is about a bug, make a list of what you have tried and what the
 
 With this information, you can form a specific question.
 
+## Ask your question
 
-## Notes
+Once you are armed with research and have identified your question, it's time to ask.
 
-### Your Brain's API
+Sasha Laundy, in her talk ["Your Brain's API"](https://www.youtube.com/watch?v=hY14Er6JX2s), gives great advice for how to ask a question effectively. She recommends letting the person you're asking know how done the code you're showing them is. If you are 30% done and run into a bug, letting the person you're asking know you're 30% done will help them calibrate their answer. At that early stage, they may recommend changing your approach altogether as you haven't invested that much into it, but they likely won't say anything about your code formatting, for example. If you're 90% done, they're more likely to point out small tweaks you can make.
 
--   both asking and helping can be hard
--   how we help and ask for help is the culture of our development environment
--   errors can equal "damnit!" or errors can equal "interesting!" -- this is culture
--   "the little voice"
-    -   "i'm never going to get good at this"
-    -   "maybe i'm just not cut out for this"
-    -   "what are they all going to think of me?"
--   even when talking to a senior person, remember that you know stuff and they know stuff, and you know stuff they don't
--   "confusion is a sign you're about to learn something"
--   asking tools
-    1.  pick a good place to work
-    2.  ask early -- 15-minute rule
-    3.  demonstrate competence. audit your speech patterns. delete the "i think"s.
-    4.  Tell them what you need. "30% feedback." Let them know how done the thing you're working on before asking for feedback. Feel free to ask for feedback early.
-    5.  Say what you've already done. "I read the docs, but I didn't understand this particular section."
-    -   "My current understanding is \_\_\_\_. I expect to see \_\_\_\_ here but instead it's doing \_\_\_\_. What's going on?"
-    -   "I want to do \_\_\_\_ and I'm trying it by \_\_\_\_. What do you think?"
-    -   After getting an answer, _say it back_ to them to check your understanding.
--   recap of asking tools
-    1.  pick a good team
-    2.  15-minute rule
-    3.  say what you need
-    4.  say what you've done
-    5.  say it back to them
--   helping mindset
-    -   the "curse of knowledge" -- being an expert makes it hard to remember what it was like to learn
-    -   every question you get asked is a chance to build up your team
-    -   model not knowing
--   Before you ask (from Flatiron School)
-    1.  Google it
-    2.  Read the error message (!!!)
-    3.  Ask another student
-    4.  Then you can ask a teacher.
--   helping tools
-    1.  welcome questions. Reward question-asking. _Don't Shoot the Dog_ by Karen Pryor.
-    -   Too many questions? Teach them to fish
-    2.  People will always remember how you made them feel.
-    -   Assume competence
-    -   "How familiar are you with \_\_\_\_?"
-    -   Praise in public, critique in private.
-    3.  Share the how and the why not just the what
-    4.  Don't grab the steering wheel
-    5.  Watch your language ~easy~ ~just~ ~obviously~
-    6.  Don't coddle: push + support
--   Summary
-    1.  Welcome questions
-    2.  Make them feel good
-    3.  Share the how & why
-    4.  Ask for the wheel
-    5.  Watch your language
+Laundy's second tip is to say what you've already done. She provides two great templates for how to phrase this:
 
-### Getting Answers
+-   "My current understanding is \_\_\_\_. I expect to see \_\_\_\_ here but instead it's doing \_\_\_\_. What's going on?"
+-   "I want to do \_\_\_\_ and I'm trying it by \_\_\_\_. What do you think?"
 
-Ten principles:
+Do not be timid about asking questions. It is important that you realize that even if you are asking someone with a lot more experience than you, you know things they do not know and they know things you don't. The real answers often come where your knowledge and theirs overlaps.
 
-1.  Explain what doesn't work
-2.  Provide everything up-front
-3.  Post your code
-4.  Do your research beforehand
-5.  Do your research during
-6.  Do your research afterwards
-7.  Don't post the same question repeatedly
-8.  Follow up after you get an answer
-9.  Treat the list like people
-10. Always consider the answer
+## Follow up
+
+After you get an answer, restate that answer in your own words to make sure you understood it. Point out places where you think you may have a misunderstanding.
+
+When you start to implement the advice you've been given, you will come up with new questions. Do your research! Armed with the previous answer, research the parts you're unfamiliar with. Once you have done that, you're ready to ask a new question.
 
 ## Resources
 
 -   [Your Brain's API](https://www.youtube.com/watch?v=hY14Er6JX2s)
 -   [Getting Answers](https://www.mikeash.com/getting_answers.html)
 -   [How to Ask Good Questions on Technical and Scientific Forums](https://www.biostars.org/p/75548/)
--   Bad resource: [How to Ask Questions the Smart Way](http://catb.org/esr/faqs/smart-questions.html)

@@ -1,4 +1,5 @@
 # Summary
 
 * [Introduction](README.md)
-* [Asking technical questions](ch1.md)
+* [Asking technical questions](asking-questions.md)
+* [Pair programming](pair-programming.md)
