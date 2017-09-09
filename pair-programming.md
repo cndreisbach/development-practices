@@ -6,7 +6,7 @@ Developers often invoke pair programming as a way to speed up development, reduc
 
 ## Who to pair with
 
-It is tempting to pair senior and junior developers together so that the senior developer can teach while coding, but in practice, this doesn't result in writing much code. This can be a good technique if the primary goal is knowledge sharing and both developers are open to learning from one another, but it's not a good technique if the goal is to write code. Pairing with a developer around your own skill level, even if you have different areas of expertise, is much more effective.
+It is tempting to pair mentors and learners together so that the mentor can teach while coding, but in practice, this doesn't result in writing much code. This can be a good technique if the primary goal is knowledge sharing and both developers are open to learning from one another, but it's not a good technique if the goal is to write code. Pairing with a developer around your own skill level, even if you have different areas of expertise, is much more effective.
 
 It is also tempting to have the same pair for long periods of time so they can bond. In my experience, pairing together for up to a week or two can be great. You can dig deep into a problem that way. It is a good idea to switch up pairs at least that often to get new perspectives and prevent knowledge from getting siloed. In addition, people don't always get along, but if you know you only have to pair with a person for a week, it's easier to deal with the friction.
 
@@ -56,50 +56,39 @@ Pair programming is extremely tiring. Working with someone else eliminates the m
 
 > When I started at a consultancy that paired 100% of the time, having only paired infrequently earlier, I fell asleep by 8 PM every night for the first week. I would get home and already be yawning. I couldn't even look at a computer in the evenings. I was writing some of the best code of my life, though.
 
-## Pairing with someone more senior
-
 ## Pairing with someone more junior
 
-## Pairing remotely
+If you are an experienced developer and are pairing with someone less experienced, you have a different task. Your task is to facilitate growth and learning. Mentor-learner pairing is not very effective for writing code quickly, but can be effective for growth if approached correctly.
+
+Your first and most important rule as the more experienced developer is this: don't drive. Stay away from the keyboard. In fact, if you have a separate keyboard, unplug it and put it away. Having a learner watch you code is demoralizing and ineffective for training. Instead, navigate by asking probing questions and providing advice. Start with questions always. An example:
+
+> Learner: I know I need to get this information from the database, but the find method takes a callback and I can't figure out how I can get this to render from the callback or even why it needs one.
+> Mentor: Hm. Have you used a callback anywhere else before?
+> L: Of course, making Ajax calls.
+> M: Ok. Pretend your database is an API and this is an Ajax call. How would you write it then?
+> L: Oh! Let me try...
+
+If questions are not working and your partner is becoming frustated, escalate to advice. Continuing the example:
+
+> L: I know I get the data here, but how do I get it back out to the route handler? I can't figure this out.
+> M: Remember, this callback is inside the route handler, so it's a closure. You have the response object. You can use `res.render` here and it will work.
+> L: Ok, let me try...
+
+There will come a point when your partner gets too frustrated to code. It happens to everyone, no matter their skill level. At that point, you can either tell them what to code, or drive for a short time, explaining every decision you make. Make sure to get them back driving as soon as possible.
+
+> L: Now I have to validate this data before rendering it, and validation takes another callback, and I should check the database for uniqueness, and that'll be another callback and this code looks terrible already.
+> M: I understand. Nested callbacks are pretty gross. We can use promises instead to clean this up.
+> L: I don't know about promises.
+> M: Ok. Cut out that callback and chain `.then` after the find method. Then paste that callback as an argument to then.
+> L: I don't understand.
+> M: Ok, can I drive? When "find" doesn't have a callback, it returns a promise. `.then` is a method on a promise, so I type that and then paste this callback. Now, I'll have to edit it...
+
+When pairing with a less experienced developer, you have as much opportunity to learn as they do and you need to be alert and aware of that. Make sure your partner knows when they've taught you something.
+
+Mentor-learner pairing is even more tiring than pairing with a partner of an equal level. Take frequent breaks and do not attempt to do it all day.
 
 ## Resources
 
 - [All I Really Need to Know about Pair Programming I Learned in Kindergarten](http://anh.cs.luc.edu/170/Kindergarten.pdf)
 - [Pairing with Junior Developers](https://www.devmynd.com/blog/2015-1-pairing-with-junior-developers/)
-
-http://wiki.c2.com/?PairProgrammingTipsAndTricks
-
-Engaging
-* Could you help me?
-* Let's do it together!
-During pairing
-* Let me drive!
-* Could you drive?
-* Here are my intentions
-* What are your intentions?
-* What should we do now? What is the next step?
-* Did we miss something?
-* Let's ask the code
-* How does this code work? Let's step into that Unit Test.
-* What's the Test?
-* I'm bored. What's going on?
-* I do not understand. Draw me a picture! Explain me!
-Resting
-* Can we break?
-* Can we stop?
-* Can we switch peer?
-* Let's play frisbee outside!
-Maybe
-* Can I take a look a this alone for a moment? (It is not pair programming but may give some relieve after intensive pairing. As long as 'a look' is only 'a look'.)
-Do not
-* This sucks
-
-http://wiki.c2.com/?RecordYourCommunicationInTheCode
-
-[All I Really Need to Know about Pair Programming I Learned in Kindergarten](http://anh.cs.luc.edu/170/Kindergarten.pdf)
-* http://anh.cs.luc.edu/170/Kindergarten.html
-
-https://www.agilealliance.org/glossary/pairing/
-
-http://www.compsci.hunter.cuny.edu/~sweiss/course_materials/csci135/csci136tutorials/pair_programming_tutorial.pdf
 
