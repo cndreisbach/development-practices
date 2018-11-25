@@ -14,7 +14,11 @@ It is also tempting to have the same pair for long periods of time so they can b
 
 Pair programming does not require a lot of equipment. The ideal setup is one large monitor or two smaller mirrored monitors and two sets of mice and keyboards. You can get away with less than that. The monitor is the most important part. You can easily pass a keyboard and mouse back and forth, but you always want both participants to be able to see the screen without craning their heads.
 
-You need to find a common denominator for your shell and editor when pair programming. While it is enjoyable to try out less common options for yourself -- I personally use fish shell and Emacs -- no one enjoys working in a unfamiliar environment. Use a simple editor with common key mappings like [Atom](https://atom.io/) or [Sublime Text](https://www.sublimetext.com/), both of which work on all major operating systems.
+You need to find a common denominator for your shell and editor when pair programming. While it is enjoyable to try out less common options for yourself -- I personally use fish shell and Emacs -- no one enjoys working in a unfamiliar environment. Use a simple editor with common key mappings like [Visual Studio Code](https://code.visualstudio.com/).
+
+### VSCode Live Share
+
+[VSCode Live Share](https://marketplace.visualstudio.com/items?itemName=MS-vsliveshare.vsliveshare) has changed the way I pair program. If you do not have a shared monitor, you can use Live Share to collaboratively edit the same project on two computers. You can share your terminal and web server as well. This makes pair programming, whether sitting next to each other or remote, very easy. It also allows each person to have their own editor setup.
 
 ## How to get started
 
@@ -63,24 +67,35 @@ If you are an experienced developer and are pairing with someone less experience
 Your first and most important rule as the more experienced developer is this: don't drive. Stay away from the keyboard. In fact, if you have a separate keyboard, unplug it and put it away. Having a learner watch you code is demoralizing and ineffective for training. Instead, navigate by asking probing questions and providing advice. Start with questions always. An example:
 
 > Learner: I know I need to get this information from the database, but the find method takes a callback and I can't figure out how I can get this to render from the callback or even why it needs one.
+>
 > Mentor: Hm. Have you used a callback anywhere else before?
+>
 > L: Of course, making Ajax calls.
+>
 > M: Ok. Pretend your database is an API and this is an Ajax call. How would you write it then?
+>
 > L: Oh! Let me try...
 
 If questions are not working and your partner is becoming frustated, escalate to advice. Continuing the example:
 
 > L: I know I get the data here, but how do I get it back out to the route handler? I can't figure this out.
+>
 > M: Remember, this callback is inside the route handler, so it's a closure. You have the response object. You can use `res.render` here and it will work.
+>
 > L: Ok, let me try...
 
 There will come a point when your partner gets too frustrated to code. It happens to everyone, no matter their skill level. At that point, you can either tell them what to code, or drive for a short time, explaining every decision you make. Make sure to get them back driving as soon as possible.
 
 > L: Now I have to validate this data before rendering it, and validation takes another callback, and I should check the database for uniqueness, and that'll be another callback and this code looks terrible already.
+>
 > M: I understand. Nested callbacks are pretty gross. We can use promises instead to clean this up.
+>
 > L: I don't know about promises.
+>
 > M: Ok. Cut out that callback and chain `.then` after the find method. Then paste that callback as an argument to then.
+>
 > L: I don't understand.
+>
 > M: Ok, can I drive? When "find" doesn't have a callback, it returns a promise. `.then` is a method on a promise, so I type that and then paste this callback. Now, I'll have to edit it...
 
 When pairing with a less experienced developer, you have as much opportunity to learn as they do and you need to be alert and aware of that. Make sure your partner knows when they've taught you something.
@@ -91,4 +106,3 @@ Mentor-learner pairing is even more tiring than pairing with a partner of an equ
 
 - [All I Really Need to Know about Pair Programming I Learned in Kindergarten](http://anh.cs.luc.edu/170/Kindergarten.pdf)
 - [Pairing with Junior Developers](https://www.devmynd.com/blog/2015-1-pairing-with-junior-developers/)
-
